@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 import { ThreeSceneComponent } from './components/three-scene/three-scene.component';
+import { MobileWarningComponent } from './components/mobile-warning/mobile-warning.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CustomCursorComponent } from './components/custom-cursor/custom-cursor.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CommonModule,
     LoadingScreenComponent,
     ThreeSceneComponent,
+    MobileWarningComponent,
     NavbarComponent,
     CustomCursorComponent,
     HeroComponent,
