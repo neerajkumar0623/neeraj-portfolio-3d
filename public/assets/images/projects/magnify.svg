@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="mgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050e11" />
+      <stop offset="50%" stop-color="#091b1f" />
+      <stop offset="100%" stop-color="#040a0c" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="mgGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#mgBg)" rx="16"/>
+  <circle cx="200" cy="120" r="160" fill="#10b981" opacity="0.12" filter="url(#mgGlow)"/>
+  <circle cx="650" cy="380" r="150" fill="#06b6d4" opacity="0.1" filter="url(#mgGlow)"/>
+
+  <!-- Main Container -->
+  <rect x="40" y="35" width="720" height="430" rx="12" fill="#081418" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="40" y="35" width="720" height="48" rx="12" fill="#0b1b20"/>
+  <circle cx="65" cy="59" r="5" fill="#ef4444" />
+  <circle cx="82" cy="59" r="5" fill="#eab308" />
+  <circle cx="99" cy="59" r="5" fill="#10b981" />
+  <text x="130" y="64" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14">MAGNIFY REVIEWS &amp; REPUTATION AI</text>
+
+  <!-- Metric Badges Row -->
+  <g transform="translate(65, 105)">
+    <rect x="0" y="0" width="200" height="75" rx="8" fill="#0c1f24" stroke="rgba(16,185,129,0.3)" stroke-width="1"/>
+    <text x="16" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11">Google Reviews Rating</text>
+    <text x="16" y="52" fill="#10b981" font-family="sans-serif" font-size="24" font-weight="bold">4.9 &#9733;&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="16" y="68" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">842 verified reviews</text>
+
+    <rect x="220" y="0" width="200" height="75" rx="8" fill="#0c1f24" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+    <text x="236" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11">Sentiment Score</text>
+    <text x="236" y="52" fill="#06b6d4" font-family="sans-serif" font-size="24" font-weight="bold">94% Positive</text>
+    <text x="236" y="68" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10">AI-analyzed tone</text>
+
+    <rect x="440" y="0" width="230" height="75" rx="8" fill="#0c1f24" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="456" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11">Auto-Response Rate</text>
+    <text x="456" y="52" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="bold">98.2%</text>
+    <text x="456" y="68" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="10">OpenAI GPT-4o Agent</text>
+  </g>
+
+  <!-- Review Stream with AI Reply -->
+  <g transform="translate(65, 205)">
+    <!-- Review Card 1 -->
+    <rect x="0" y="0" width="670" height="115" rx="8" fill="#0a191d" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+    <circle cx="28" cy="28" r="14" fill="#10b981"/>
+    <text x="28" y="33" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">S</text>
+    <text x="52" y="26" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="bold">Sarah Jenkins</text>
+    <text x="52" y="40" fill="#f59e0b" font-family="sans-serif" font-size="10">&#9733;&#9733;&#9733;&#9733;&#9733; 2 hours ago on Google</text>
+    <text x="24" y="65" fill="#cbd5e1" font-family="sans-serif" font-size="11">"Absolutely outstanding service. The online appointment system was smooth, and support was prompt."</text>
+    
+    <!-- AI auto-response snippet -->
+    <rect x="24" y="78" width="620" height="26" rx="4" fill="#0e2329"/>
+    <text x="36" y="95" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10">AI Auto-Reply: "Thank you Sarah! We are thrilled to hear your appointment went smoothly. Looking forward to serving you again!"</text>
+
+    <!-- Review Card 2 (Gated private) -->
+    <rect x="0" y="130" width="670" height="105" rx="8" fill="#0a191d" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+    <circle cx="28" cy="158" r="14" fill="#f59e0b"/>
+    <text x="28" y="163" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">M</text>
+    <text x="52" y="156" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="bold">Marcus Vance</text>
+    <text x="52" y="170" fill="#f59e0b" font-family="sans-serif" font-size="10">&#9733;&#9733;&#9733;&#9734;&#9734; Intercepted Private Feedback</text>
+    <text x="24" y="195" fill="#cbd5e1" font-family="sans-serif" font-size="11">"The wait time was longer than expected at the reception. Good product, but desk was busy."</text>
+    <rect x="24" y="208" width="620" height="20" rx="4" fill="#1a1c24"/>
+    <text x="36" y="222" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Action: Routed to private resolution queue before posting. Manager alerted via SMS.</text>
+  </g>
+</svg>

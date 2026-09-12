@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c18" />
+      <stop offset="50%" stop-color="#0a1329" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Cyber Grid -->
+  <g opacity="0.15">
+    <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350 M 0,400 L 800,400 M 0,450 L 800,450" stroke="#00f2fe" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M 50,0 L 50,500 M 100,0 L 100,500 M 150,0 L 150,500 M 200,0 L 200,500 M 250,0 L 250,500 M 300,0 L 300,500 M 350,0 L 350,500 M 400,0 L 400,500 M 450,0 L 450,500 M 500,0 L 500,500 M 550,0 L 550,500 M 600,0 L 600,500 M 650,0 L 650,500 M 700,0 L 700,500 M 750,0 L 750,500" stroke="#00f2fe" stroke-width="1" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Glow Accents -->
+  <circle cx="700" cy="80" r="140" fill="#00f2fe" opacity="0.08" filter="url(#glow)"/>
+  <circle cx="120" cy="420" r="160" fill="#8b5cf6" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Window Header / Browser Bar -->
+  <rect x="40" y="35" width="720" height="42" rx="10" fill="#0d1629" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1"/>
+  <circle cx="65" cy="56" r="6" fill="#ef4444" />
+  <circle cx="85" cy="56" r="6" fill="#eab308" />
+  <circle cx="105" cy="56" r="6" fill="#10b981" />
+  <rect x="230" y="44" width="340" height="24" rx="6" fill="#060a14" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="400" y="60" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">edutrack.enterprise.internal/attendance/telemetry</text>
+
+  <!-- Main Dashboard Container -->
+  <rect x="40" y="85" width="720" height="375" rx="10" fill="#080e1d" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+
+  <!-- Sidebar -->
+  <rect x="55" y="105" width="130" height="335" rx="8" fill="#0c152b" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+  <rect x="70" y="125" width="100" height="26" rx="6" fill="url(#cyanGrad)" opacity="0.2"/>
+  <text x="85" y="142" fill="#00f2fe" font-family="sans-serif" font-weight="bold" font-size="12">EDUTRACK</text>
+  <rect x="70" y="170" width="100" height="18" rx="4" fill="rgba(255,255,255,0.05)"/>
+  <rect x="70" y="200" width="100" height="18" rx="4" fill="rgba(255,255,255,0.05)"/>
+  <rect x="70" y="230" width="100" height="18" rx="4" fill="rgba(255,255,255,0.05)"/>
+  <rect x="70" y="260" width="100" height="18" rx="4" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Metrics Cards -->
+  <g transform="translate(200, 105)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="165" height="85" rx="8" fill="#0d1830" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1"/>
+    <text x="16" y="26" fill="#94a3b8" font-family="sans-serif" font-size="11">Daily Check-ins</text>
+    <text x="16" y="56" fill="#00f2fe" font-family="sans-serif" font-size="22" font-weight="bold">98.4%</text>
+    <text x="16" y="74" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10">+4.2% real-time</text>
+
+    <!-- Card 2 -->
+    <rect x="180" y="0" width="165" height="85" rx="8" fill="#0d1830" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1"/>
+    <text x="196" y="26" fill="#94a3b8" font-family="sans-serif" font-size="11">Live Classrooms</text>
+    <text x="196" y="56" fill="#c084fc" font-family="sans-serif" font-size="22" font-weight="bold">42 Active</text>
+    <text x="196" y="74" fill="#00f2fe" font-family="'JetBrains Mono', monospace" font-size="10">WebRTC 60fps</text>
+
+    <!-- Card 3 -->
+    <rect x="360" y="0" width="180" height="85" rx="8" fill="#0d1830" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+    <text x="376" y="26" fill="#94a3b8" font-family="sans-serif" font-size="11">Sync Status</text>
+    <text x="376" y="56" fill="#10b981" font-family="sans-serif" font-size="22" font-weight="bold">Synced</text>
+    <text x="376" y="74" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Biometric &amp; QR</text>
+  </g>
+
+  <!-- Big Chart & Table -->
+  <g transform="translate(200, 205)">
+    <!-- Chart Area -->
+    <rect x="0" y="0" width="345" height="235" rx="8" fill="#0a1224" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    <text x="20" y="30" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">Attendance Attendance Telemetry</text>
+    <!-- Wave curve -->
+    <path d="M 20,180 C 70,160 110,80 160,110 C 210,140 260,60 320,85" fill="none" stroke="url(#cyanGrad)" stroke-width="3" filter="url(#glow)"/>
+    <path d="M 20,180 C 70,160 110,80 160,110 C 210,140 260,60 320,85 L 320,200 L 20,200 Z" fill="url(#cyanGrad)" opacity="0.1"/>
+
+    <!-- Right Side Panel -->
+    <rect x="360" y="0" width="180" height="235" rx="8" fill="#0a1224" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    <text x="376" y="30" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">Live Channels</text>
+    
+    <rect x="376" y="50" width="148" height="42" rx="6" fill="#0e1b36"/>
+    <circle cx="394" cy="71" r="5" fill="#10b981"/>
+    <text x="408" y="75" fill="#e2e8f0" font-family="sans-serif" font-size="11">Computer Networks</text>
+
+    <rect x="376" y="102" width="148" height="42" rx="6" fill="#0e1b36"/>
+    <circle cx="394" cy="123" r="5" fill="#10b981"/>
+    <text x="408" y="127" fill="#e2e8f0" font-family="sans-serif" font-size="11">Data Structures</text>
+
+    <rect x="376" y="154" width="148" height="42" rx="6" fill="#0e1b36"/>
+    <circle cx="394" cy="175" r="5" fill="#f59e0b"/>
+    <text x="408" y="179" fill="#e2e8f0" font-family="sans-serif" font-size="11">Database Systems</text>
+  </g>
+</svg>

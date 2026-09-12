@@ -1,0 +1,314 @@
+<section id="hero" class="hero-section hero--dark">
+  <!-- =========================================================================
+       HERO LAYOUT: Video on Left, Content on Right
+       ========================================================================= -->
+  <div class="hero-content-wrapper">
+    <div class="hero-grid">
+      <!-- Left Column: Scroll-controlled Video -->
+      <div class="hero-video-column">
+        <video
+          #heroVideo
+          class="hero-scroll-video"
+          muted
+          playsinline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
+        >
+          <source src="assets/hero_video.mp4" type="video/mp4">
+        </video>
+        <!-- Fallback Image (shows if video fails) -->
+        <img 
+          src="assets/images/hero_image.png" 
+          alt="Neeraj Kumar - MEAN Stack Developer & AI Engineer" 
+          class="hero-bg-image fallback-image"
+          fetchPriority="high"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Right Column: Interactive Details Panel with 4 Phases -->
+      <div class="hero-details-panel">
+        <!-- Status Pill -->
+        <!-- <div class="hero-status-pill">
+          <span class="status-pulse-dot"></span>
+          <span class="status-pill-text">AVAILABLE FOR ROLES &amp; CONSULTING</span>
+        </div> -->
+
+        <!-- =======================================================
+             PHASE 1: Profile
+             ======================================================= -->
+        <div 
+          class="hero-phase" 
+          [class.hero-phase--active]="currentPhase() === 1"
+        >
+          <h1 class="hero-name">
+            Hi, I'm <br />
+            <span class="hero-name-highlight">Neeraj Kumar</span>
+          </h1>
+
+          <div class="hero-profession">
+            <span class="profession-text">{{ typedText() }}</span>
+            <span class="profession-cursor">|</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-phase-actions">
+            <a 
+              href="#projects" 
+              class="btn btn--primary hero-btn"
+              (click)="scrollTo('projects', $event)"
+            >
+              <span>View My Work</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+
+            <a 
+              href="#contact" 
+              class="btn btn--secondary hero-btn"
+              (click)="scrollTo('contact', $event)"
+            >
+              <span>Let's Connect</span>
+              <span class="btn-sparkle">&#10022;</span>
+            </a>
+          </div>
+
+          <div class="hero-phase-socials">
+            <a href="https://github.com/Neerajkumar55" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+              <i class="devicon-github-original"></i>
+            </a>
+            <a href="https://linkedin.com/in/neeraj-kumar-dev" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <i class="devicon-linkedin-plain"></i>
+            </a>
+            <a href="mailto:neeraj.developer.contact@gmail.com" class="social-btn" aria-label="Email">
+              <span>&#9993;</span>
+            </a>
+            <span class="social-divider"></span>
+            <span class="location-chip">
+              <span class="loc-indicator"></span>
+              India &bull; Remote Worldwide
+            </span>
+          </div>
+        </div>
+
+        <!-- =======================================================
+             PHASE 2: Education & Background
+             ======================================================= -->
+        <div 
+          class="hero-phase" 
+          [class.hero-phase--active]="currentPhase() === 2"
+        >
+          <div class="phase-eyebrow">
+            <span class="bracket">&#127891;</span>
+            <span>ACADEMIC FOUNDATION &amp; DEGREE</span>
+          </div>
+
+          <h2 class="phase-heading">
+            Computer Applications <br />
+            <span class="hero-name-highlight">&amp; Software Systems</span>
+          </h2>
+
+          <div class="glass-panel education-hero-box">
+            <div class="edu-top">
+              <div class="edu-icon-wrap">
+                <span>&#127963;</span>
+              </div>
+              <div class="edu-info">
+                <strong class="edu-inst">Mohan Lal Sukhadia University</strong>
+                <p class="edu-location">Udaipur, Rajasthan, India</p>
+              </div>
+              <span class="edu-chip">BCA Graduate</span>
+            </div>
+
+            <p class="edu-desc">
+              Strong academic foundation in Computer Science, Data Structures, Relational Database Management Systems, Algorithm Optimization, and Scalable Web Architecture.
+            </p>
+          </div>
+
+          <div class="phase-stats-row">
+            <div class="stat-pill">
+              <span class="stat-num">4+</span>
+              <span class="stat-txt">Years Experience</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">20+</span>
+              <span class="stat-txt">Projects Shipped</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">5+</span>
+              <span class="stat-txt">Production SaaS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- =======================================================
+             PHASE 3: Expanded Tech Stack Showcase
+             ======================================================= -->
+        <div 
+          class="hero-phase" 
+          [class.hero-phase--active]="currentPhase() === 3"
+        >
+          <div class="phase-eyebrow">
+            <span class="bracket">&#9881;</span>
+            <span>CORE TECHNICAL STACK</span>
+          </div>
+
+          <h2 class="phase-heading">
+            My Engineering <span class="hero-name-highlight">Arsenal</span>
+          </h2>
+
+          <p class="belt-subtitle">
+            Enterprise frontend architectures, modular Node.js/NestJS backends, distributed SQL/NoSQL databases, and Generative AI pipelines:
+          </p>
+
+          <!-- DUAL LEFT-RIGHT ANIMATED CONVEYOR BELTS -->
+          <div class="hero-belts-wrapper hero-belts-wrapper--expanded">
+            <!-- Belt 1: Moving LEFT -->
+            <div class="hero-belt-container">
+              <div class="hero-belt-track hero-belt-track--left">
+                <div *ngFor="let tech of techTrack1" class="hero-belt-card">
+                  <i [class]="tech.icon" class="belt-icon"></i>
+                  <span class="belt-name">{{ tech.name }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Belt 2: Moving RIGHT -->
+            <div class="hero-belt-container">
+              <div class="hero-belt-track hero-belt-track--right">
+                <div *ngFor="let tech of techTrack2" class="hero-belt-card">
+                  <i [class]="tech.icon" class="belt-icon"></i>
+                  <span class="belt-name">{{ tech.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =======================================================
+             PHASE 4: Explore & Connect
+             ======================================================= -->
+        <div 
+          class="hero-phase" 
+          [class.hero-phase--active]="currentPhase() === 4"
+        >
+          <div class="phase-eyebrow">
+            <span class="bracket">&#10022;</span>
+            <span>LET'S BUILD TOGETHER</span>
+          </div>
+
+          <h2 class="phase-heading">
+            Let's Explore <span class="hero-name-highlight">More</span>
+          </h2>
+
+          <p class="explore-lead">
+            Discover my featured projects, system architectures, and get in touch to collaborate on next-generation web applications and AI-powered products.
+          </p>
+
+          <div class="hero-phase-actions">
+            <a 
+              href="#contact" 
+              class="btn btn--primary hero-btn"
+              (click)="scrollTo('contact', $event)"
+            >
+              <span>Get in Touch</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+
+            <a 
+              href="#projects" 
+              class="btn btn--secondary hero-btn"
+              (click)="scrollTo('projects', $event)"
+            >
+              <span>Explore Portfolio</span>
+              <span class="btn-arrow">&darr;</span>
+            </a>
+          </div>
+
+          <div class="resume-download-wrapper">
+            <a 
+              href="assets/resume/Neeraj_Kumar_Resume.pdf" 
+              target="_blank" 
+              class="resume-link"
+            >
+              <span class="file-icon">&#128196;</span>
+              <span>Download Full Curriculum Vitae (PDF)</span>
+              <span class="download-arrow">&darr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Vertical Timeline Navigation (01, 02, 03, 04) -->
+  <nav class="hero-timeline-nav" aria-label="Hero Timeline Navigation">
+    <div class="timeline-track-bar">
+      <div class="timeline-fill-bar" [style.height.%]="progressHeight()"></div>
+    </div>
+
+    <!-- Step 01 -->
+    <button 
+      class="timeline-step-btn"
+      [class.timeline-step-btn--active]="currentPhase() === 1"
+      (click)="setPhase(1)"
+      aria-label="Navigate to Profile Phase"
+    >
+      <span class="step-num">01</span>
+      <div class="step-dot-wrap">
+        <div class="step-dot"></div>
+      </div>
+      <span class="step-label">Profile</span>
+    </button>
+
+    <!-- Step 02 -->
+    <button 
+      class="timeline-step-btn"
+      [class.timeline-step-btn--active]="currentPhase() === 2"
+      (click)="setPhase(2)"
+      aria-label="Navigate to Education Phase"
+    >
+      <span class="step-num">02</span>
+      <div class="step-dot-wrap">
+        <div class="step-dot"></div>
+      </div>
+      <span class="step-label">Education</span>
+    </button>
+
+    <!-- Step 03 -->
+    <button 
+      class="timeline-step-btn"
+      [class.timeline-step-btn--active]="currentPhase() === 3"
+      (click)="setPhase(3)"
+      aria-label="Navigate to Tech Stack Phase"
+    >
+      <span class="step-num">03</span>
+      <div class="step-dot-wrap">
+        <div class="step-dot"></div>
+      </div>
+      <span class="step-label">Tech Stack</span>
+    </button>
+
+    <!-- Step 04 -->
+    <button 
+      class="timeline-step-btn"
+      [class.timeline-step-btn--active]="currentPhase() === 4"
+      (click)="setPhase(4)"
+      aria-label="Navigate to Explore Phase"
+    >
+      <span class="step-num">04</span>
+      <div class="step-dot-wrap">
+        <div class="step-dot"></div>
+      </div>
+      <span class="step-label">Explore</span>
+    </button>
+  </nav>
+
+  <!-- Bottom Scroll Mouse Hint -->
+  <a href="#about" class="hero-scroll-hint" (click)="scrollTo('about', $event)" aria-label="Scroll Down">
+    <span class="scroll-mouse">
+      <span class="mouse-dot"></span>
+    </span>
+    <span class="scroll-txt">SCROLL</span>
+  </a>
+</section>

@@ -1,0 +1,23 @@
+<app-loading-screen [progress]="loadProgress"></app-loading-screen>
+
+<app-three-scene
+  (progress)="onProgress($event)"
+  (ready)="onSceneReady()"
+></app-three-scene>
+
+<app-custom-cursor></app-custom-cursor>
+<app-navbar></app-navbar>
+
+<main class="main-content" [class.main-content--visible]="sceneReady">
+  <app-hero></app-hero>
+  <app-about></app-about>
+  <app-skills></app-skills>
+  <app-experience></app-experience>
+  <app-projects></app-projects>
+  <app-ai-section></app-ai-section>
+  <app-services></app-services>
+  <app-education></app-education>
+  <app-contact></app-contact>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+.main-content {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-content--visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-content {
+    transition: none;
+    opacity: 1;
+  }
+}
